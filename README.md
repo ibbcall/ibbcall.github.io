@@ -4,4 +4,4 @@ hello
 
 HI
 
-[home](home.md)
+[home](data/home.md)
