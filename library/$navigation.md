@@ -25,3 +25,4 @@
     - [Atom对Markdown的原生支持](?file=006-标记语言/05-学习markdown/05-Atom对Markdown的原生支持 "Atom对Markdown的原生支持")
 
 ##### 管理杂记
+- [理人、理事](?file=007-管理杂记/100-理人、理事 "理人、理事")
