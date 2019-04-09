@@ -47,6 +47,13 @@ graph TB
 ```
 
 ```mermaid
+    graph LR
+        od>Odd shape]-- Two line<br>edge comment --> ro
+        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
+        di==>ro2(Rounded square shape)
+```
+
+```mermaid
 graph LR
     start(开始)-->chouqu(抽取数据)
     chouqu-->id3(清洗数据)
@@ -54,11 +61,15 @@ graph LR
     id4-->eid5nd(结束)
 ```
 
-** fd **
 
-**ddfdfd**
-start=>start:
 
-|fdsdf|fdd|
-| sdf | dfd |
+```mermaid
+graph LR
+	id1(start)--if not ok-->id2(df)
+	id1(start)--if ok-->id3(fd)
+	id2--if fault-->id1
+
+```
+
+
 
