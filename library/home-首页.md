@@ -14,13 +14,11 @@
 <br />
 <br />
 
-![GitHub last commit](https://img.shields.io/github/last-commit/ibbcall/ibbcall.github.io.svg) ![GitHub Release Date](https://img.shields.io/github/release-date/ibbcall/ibbcall.github.io.svg) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/ibbcall/ibbcall.github.io.svg)
-
-![GitHub issues](https://img.shields.io/github/issues-raw/ibbcall/ibbcall.github.io.svg)![GitHub issues](https://img.shields.io/github/issues-raw/ibbcall/ibbcall.github.io.svg)
-
+![GitHub last commit](https://img.shields.io/github/last-commit/ibbcall/ibbcall.github.io.svg) ![GitHub Release Date](https://img.shields.io/github/release-date/ibbcall/ibbcall.github.io.svg) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/ibbcall/ibbcall.github.io.svg)<br>
+![GitHub issues](https://img.shields.io/github/issues-raw/ibbcall/ibbcall.github.io.svg)![GitHub issues](https://img.shields.io/github/issues-raw/ibbcall/ibbcall.github.io.svg)<br>
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ibbcall/ibbcall.github.io.svg)![GitHub repo size](https://img.shields.io/github/repo-size/ibbcall/ibbcall.github.io.svg)
 
-#### 使用 [amWiki 轻文库](https://amwiki.org) 构建!
 
-[ [amWiki 官网文档中心](https://amwiki.org/doc/) ]
+
+使用 [amWiki 轻文库](https://amwiki.org) 构建!<br>[ [amWiki 官网文档中心](https://amwiki.org/doc/) ]
 
