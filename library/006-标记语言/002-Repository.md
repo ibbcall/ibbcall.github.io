@@ -1,10 +1,4 @@
-# sdf
-
-adsf
-
-# df
-快递费
-## 地方
+# mermaid example
 
 
 ```mermaid
@@ -61,13 +55,16 @@ graph LR
     id4-->eid5nd(结束)
 ```
 
-
-
 ```mermaid
 graph LR
 	id1(start)--if not ok-->id2(df)
 	id1(start)--if ok-->id3(fd)
 	id2--if fault-->id1
+
+```
+
+``` flow
+start:st=>ids
 
 ```
 
