@@ -13,7 +13,6 @@
 
 ![group of martial artists sitting on the grounds](../assets/home-tao)
 
-
 ![GitHub last commit](https://img.shields.io/github/last-commit/ibbcall/ibbcall.github.io.svg) ![GitHub Release Date](https://img.shields.io/github/release-date/ibbcall/ibbcall.github.io.svg) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/ibbcall/ibbcall.github.io.svg)<br>
 ![GitHub issues](https://img.shields.io/github/issues-raw/ibbcall/ibbcall.github.io.svg)![GitHub issues](https://img.shields.io/github/issues-raw/ibbcall/ibbcall.github.io.svg)<br>
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ibbcall/ibbcall.github.io.svg)![GitHub repo size](https://img.shields.io/github/repo-size/ibbcall/ibbcall.github.io.svg)
