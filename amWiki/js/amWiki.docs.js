@@ -410,6 +410,27 @@
         return url;
     };
 
+    var _escapes = [
+        '\\',
+        '`',
+        '*',
+        '{',
+        '}',
+        '[',
+        ']',
+        '(',
+        ')',
+        '#',
+        '+',
+        '-',
+        '.',
+        '!',
+        '_',
+        '>',
+        '|'  // 表格中有|会让表格变形
+    ];
+
+
     /**
      * 渲染文档
      * @param {String} content - 需要渲染的文档内容
@@ -421,6 +442,9 @@
         this.cleanView();
         //增加"\"符转义功能
         content = content.replace(/\\(.)/g, function (m, s1) {
+            if (_escapes.indexOf(s1) == -1) {
+                return m;
+            }
             return '&#' + s1.charCodeAt(0) + ';';
         });
         //创建脚注
@@ -455,6 +479,29 @@
                 that._setJSCommentDisable($elm);
             }
         });
+        
+         // 解析 mermaid
+         this.$e.view.find('pre').each(function (i, element) {
+            var $elm = $(element); // 标记位置
+            var txt = $(element).text();
+
+             if (txt.indexOf('graph') === 0 || txt.indexOf('sequenceDiagram') === 0 || txt.indexOf('gantt') === 0) {
+                $(element).hide();
+
+                 // 使用 mermaid api 解析
+                mermaid.initialize({
+                    startOnLoad: true
+                })
+                $(function () {
+                    var graphDefinition = txt;
+                    var cb = function (svgGraph) {
+                        $elm.after(svgGraph);
+                    }
+                    mermaid.render('mermaid-chart' + i, graphDefinition, cb);
+                })
+            }
+        });
+
         //设置网页title
         var title = this.$e.view.find('h1').eq(0).text();
         this.$e.title.text(title);
