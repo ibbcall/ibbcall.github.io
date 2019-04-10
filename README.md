@@ -1,2 +1,2 @@
-# cc wiki repository
+# Initial page
 
