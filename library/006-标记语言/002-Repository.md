@@ -68,8 +68,8 @@ start:st=>ids
 
 ```
 
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+.mermaid[graph LR
+        A-->B
+        B-->C
+        C-->A
+        D-->C]
