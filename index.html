@@ -10,6 +10,44 @@
         <link rel="stylesheet" type="text/css" href="amWiki/css/markdownbody.github.css" />
         <link rel="stylesheet" type="text/css" href="amWiki/css/lhjs.github-gist.css" />
         <link rel="stylesheet" type="text/css" href="amWiki/css/amWiki.css" />
+        <script>
+            var g = function (hljs) {
+                var r = "[a-z'][a-zA-Z0-9_']*", c = "(" + r + ":" + r + "|" + r + ")";
+                var keyw = {
+                    keyword: 'graph sequenceDiagram participant loop end',
+                    typename: 'Note',
+                    literal: "false true left right"
+                };
+                return {
+                    case_insensitive: false,
+                    aliases: ["mermaid"],
+                    k: keyw,
+                    i: 'for',
+                    c: [{
+                        cN: "function",
+                        b: "^" + r + "\\s*\\(",
+                        e: "->",
+                        rB: !0,
+                        i: "\\(|#|//|/\\*|\\\\|:|;",
+                        starts: {
+                            e: ";|\\.", k: keyw, c: [
+                                {cN: "comment", b: "%", e: "$"}
+                            ]
+                        }
+                    },
+                        {cN: "comment", b: "%", e: "$"}
+                    ]
+                };
+            };
+            hljs.registerLanguage('mermaid', g);
+            hljs.initHighlightingOnLoad();
+            $(function () {
+                setupLanguages(["shell", "javascript", "html", "css","mermaid"]);
+            });
+            var callback = function(){
+                alert('A callback was triggered');
+            }
+        </script>
     </head>
 
     <body>
