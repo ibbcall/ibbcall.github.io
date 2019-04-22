@@ -1,21 +1,101 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>hello | ccblog</title>
-    <meta name="description" content="Just playing around">
-    
-    
-    <link rel="preload" href="/assets/css/0.styles.0fa35ecc.css" as="style"><link rel="preload" href="/assets/js/app.383dd509.js" as="script"><link rel="preload" href="/assets/js/5.4c9574d5.js" as="script"><link rel="prefetch" href="/assets/js/2.52df266a.js"><link rel="prefetch" href="/assets/js/3.de5fc9fa.js"><link rel="prefetch" href="/assets/js/4.7326ba9d.js"><link rel="prefetch" href="/assets/js/6.11aa8c20.js"><link rel="prefetch" href="/assets/js/7.bb2b9212.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.0fa35ecc.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">ccblog</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/" class="active sidebar-link">hello</a></li><li><a href="/人生点滴/" class="sidebar-link">人生点滴</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/人生点滴/#以退为进" class="sidebar-link">以退为进</a></li><li class="sidebar-sub-header"><a href="/人生点滴/#认真" class="sidebar-link">认真</a></li><li class="sidebar-sub-header"><a href="/人生点滴/#火候" class="sidebar-link">火候</a></li></ul></li></ul> </div> <div class="page"> <div class="content"><h1 id="hello"><a href="#hello" aria-hidden="true" class="header-anchor">#</a> hello</h1> <p>d</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/人生点滴/">
-          人生点滴
-        </a>
-        →
-      </span></p></div> </div> <!----></div></div>
-    <script src="/assets/js/app.383dd509.js" defer></script><script src="/assets/js/5.4c9574d5.js" defer></script>
-  </body>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>ccblog</title>
+  <link rel="icon" href="assets/images/c-icon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '🖊<font color="#CD5C5C"><strong>ccblog</strong></font>',
+      repo: 'ibbcall/ccblog',
+      basePath: '/ccblog/',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      loadNavbar: true,
+      auto2top: true,
+      // autoHeader: true,
+      disqus: 'ibbcall-ccblog',
+      formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}:{ss}',
+      themeColor: '#CD5C5C', //replace theme color. red:#DC143C, blue: #3F51B5
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      pagination: {
+        previousText: 'PREVIOUS',
+        nextText: 'NEXT',
+        crossChapter: true
+      },
+      plantuml: {
+        skin: 'classic',
+      },
+      plugins: [
+        function (hook) {
+          var footer = [
+
+            '<footer>',
+            '<span></span>',
+            '</footer>'
+          ].join('')
+
+          hook.afterEach(function (html) {
+            return html + footer
+          })
+        },
+        function(hook, vm) {
+          hook.beforeEach(function (html) {
+            var url = 'https://github.com/ibbcall/ccblog/edit/master/' + vm.route.file
+            var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
+
+            return editHtml
+              + html
+              + '\n----\n'
+              + '<div align="right">'
+              + '[Written by <a href="https://github.com/ibbcall">ibbcall</a>] '
+              + '[<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\">licence: CC BY-NC-ND 4.0</a>]<br>'
+              + 'Last modified {docsify-updated}'
+              + '</div>'
+          })
+        }
+      ],
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + mermaid.render(lang, code) + "</div>"
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      }
+    };
+    mermaid.initialize({ startOnLoad: false });
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('/scripts/serviceWorker.js')
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <script src="//unpkg.com/docsify-copy-code"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/disqus.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-csharp.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
+</body>
 </html>
