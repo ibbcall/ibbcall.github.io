@@ -1,0 +1,55 @@
+language: node_js
+node_js:
+  - "10"
+cache: npm
+
+notifications:
+  email:
+    recipients:
+      - cuixuesong@gmail.com # 设置通知邮件
+    on_success: change
+    on_failure: always
+
+install:
+  - sudo apt-get install ttf-wqy-microhei
+  - sudo apt-get install default-jre
+  - sudo apt-get install graphviz
+  - export GRAPHVIZ_DOT=/usr/bin/dot
+  - java -jar plantuml.jar -testdot
+  - npm install -g gitbook-cli
+  - npm install -g gitbook-summary
+  - npm install -g gitbook-plugin-copy-code-button
+ # - npm install -g gitbook-plugin-mermaid
+ # - npm install -g gitbook-plugin-mermaid-full
+  - npm install -g gitbook-plugin-webengage
+  - npm install -g gitbook-plugin-youtube
+  - npm install -g gitbook-plugin-toggle-chapters
+  - npm install -g gitbook-plugin-page-toc
+  - npm install -g gitbook-plugin-uml
+  - npm install -g gitbook-plugin-revealjs
+  - npm install -g gitbook-plugin-multipart
+ # - npm install -g gitbook-plugin-theme-comscore
+
+  - for item in `echo mermaid mermaid-full youtube sequence-diagrams page-toc toc splitter toggle-chapters navigator ace prism search-pro`;do npm -f install -g gitbook-plugin-$item;done;
+  - gitbook install
+  
+script:
+  - book sm g
+  - cat SUMMARY.md
+  - gitbook build
+
+after_script:
+  - cd _book
+  - git init
+  - git remote add origin https://${REF}
+  - git add .
+  - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages"
+  - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - REF=github.com/ibbcall/ccblog.git # 设置 github 地址

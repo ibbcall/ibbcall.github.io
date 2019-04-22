@@ -1,0 +1,16 @@
+{ 
+  "name": "ibbcall.github.io",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "upgrade": "yarn-upgrade-all && cp node_modules/mermaid/dist/mermaid.min.js scripts/",
+    "watch": "gitbook serve . ./www",
+    "release": "gitbook build . ./www && cp -r www/* ../ibbcall.github.io/"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "mermaid": "^8.0.0-rc.6",
+    "standard": "^11.0.1",
+    "yarn-upgrade-all": "^0.3.0"
+  }
+}
