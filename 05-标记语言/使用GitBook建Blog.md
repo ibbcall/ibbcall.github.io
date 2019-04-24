@@ -1,4 +1,4 @@
-# 生成gitbook记录
+# 使用GitBook建Blog
 
 > 对使用gitbook+github.pages生成blog网站的过进行记录。  
 > 生成的页支持：GFM、mermaid、plantUML。

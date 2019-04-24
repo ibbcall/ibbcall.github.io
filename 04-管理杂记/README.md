@@ -63,7 +63,7 @@
 *未雨绸缪 OR 亡羊补牢*
 
 [《诗经·豳风·{鸱鸮|chī xiāo}》](https://sou-yun.cn/Query.aspx?type=poem&id=263)：「迨天之未阴雨，彻彼桑土，绸缪牖户。」  
-意思是：意思是鸱鸮在未下雨时就啄来桑树皮，修补鸟巢。  
+意思是：鸱鸮在未下雨时就啄来桑树皮，修补鸟巢。  
 
  ![](../assets/images/鴟鴞.jpg )
 图片引用自[搜韵](https://sou-yun.cn/Query.aspx?type=poem&id=263)。感谢！ 
