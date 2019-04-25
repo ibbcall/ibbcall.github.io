@@ -53,7 +53,7 @@
         function(hook, vm) {
           hook.beforeEach(function (html) {
             var url = 'https://github.com/ibbcall/ccblog/edit/master/' + vm.route.file
-            var editHtml = '[📝 EDIT DOCUMENT](' + url + ')\n'
+            var editHtml = '[📝EDIT](' + url + ')\n'
 
             return editHtml
               + html
