@@ -4,7 +4,7 @@
 一种轻量化的标记语言，语法不统一。[CommonMark Spec](<https://spec.commonmark.org/>)与[GitHub Flavored Markdown Spec(GFM)](https://github.github.com/gfm/)有比较严格的定义。
 
  - GFM是Markdown的一种方言，是CommonMark Spec的严格超集。GFM在GitHub上有广泛应用，除了README文件外，issues和wiki均支持markdown语法。
- - [GFM语法介绍(中文)](https://github.com/guodongxiaren/README/edit/master/README.md)
+ - [GFM语法介绍(中文)](https://github.com/guodongxiaren/README/)
  - [Markdown Plus](https://mdp.tylingsoft.com/),增强版的Markdown在线编辑器。
 
 ## [mermaid](<https://mermaidjs.github.io/>)
@@ -37,3 +37,6 @@ Archimate-PlanUML结合了PlantUML和ArchiMate的优点，提供了一种创建�
     - [在 VSCode 下用 Markdown Preview Enhanced 愉快地写文档(By Aya Magician)](https://zhuanlan.zhihu.com/p/56699805)
 
 ## [😎emoji😜](https://getemoji.com/)
+
+## svg
+- [svg在线编辑](https://svg-edit.github.io/svgedit/releases/svg-edit-2.8.1/svg-editor.html)
