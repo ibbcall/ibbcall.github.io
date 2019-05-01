@@ -39,4 +39,4 @@ Archimate-PlanUML结合了PlantUML和ArchiMate的优点，提供了一种创建�
 ## [😎emoji😜](https://getemoji.com/)
 
 ## svg
-- [svg在线编辑](https://svg-edit.github.io/svgedit/releases/svg-edit-2.8.1/svg-editor.html)
+- [svg在线编辑](https://svg-edit.github.io/svgedit/releases/latest/editor/svg-editor-es.html)
