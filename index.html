@@ -80,6 +80,29 @@
       }
     }
   </script>
+
+  <!-- Gitalk 评论 start  -->
+
+  <!-- Link Gitalk 的支持文件  -->
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+      var gitalk = new Gitalk({
+
+      // gitalk的主要参数
+      clientID: `d7c2890e68840e8528eb`,
+      clientSecret: `3a1512afee82e1cd3eb66682de920c078699c918`,
+      repo: `ibbcall.github.io`,
+      owner: 'ibbcall',
+      admin: ['ibbcall'],
+      id: location.pathname,
+      distractionFreeMode: false
+      });
+      gitalk.render('gitalk-container');
+  </script> 
+  <!-- Gitalk end -->
+
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
