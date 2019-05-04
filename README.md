@@ -2,8 +2,8 @@
 
 ### 记录所感，记录所悟。
 
-*We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time. - [Thomas Stearns Eliot, "Little gidding(No. 4 of 'Four Quartets')"]
-我們不應停止探索，一切探索的終點，終將帶我們回到起點，這時才算第一次認識它。 -[T·S·艾略特, 《小吉丁》]*
+*We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time. - [Thomas Stearns Eliot, "Little gidding(No. 4 of 'Four Quartets')"]  
+译：我們不應停止探索，一切探索的終點，終將帶我們回到起點，這時才算第一次認識它。 -[T·S·艾略特, 《小吉丁》]*
 
 - 人生短暂，苦乐参半。从哪里来，到哪里去。[That is the question.](/01-人生点滴/README.md)
 - 了解人生，从了解[自己](02-中医学习/README.md)开始。
