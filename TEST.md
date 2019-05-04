@@ -3,6 +3,7 @@
 <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=3 orderedList=false} -->
 <!-- code_chunk_output -->
 
+* [Test Svg](#test-svg)
 * [Test Markdown All-in-one plugin](#test-markdown-all-in-one-plugin)
 * [Test gravizo](#test-gravizo)
 * [Test Sequence Diagrams](#test-sequence-diagrams)
@@ -125,6 +126,8 @@ archimate #Technology "VPN Server" as vpnServerA <<technology-device>>
 rectangle GO #lightgreen
 rectangle STOP #red
 rectangle WAIT #orange
+
+GO->STOP
 @enduml
 ```
 
